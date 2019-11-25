@@ -19,10 +19,11 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
   && mkdir /pastec/data \
   && cd /pastec/data \
   && wget http://pastec.io/files/visualWordsORB.tar.gz \
-  && tar zxf visualWordsORB.tar.gz
+  && tar zxf visualWordsORB.tar.gz \
+  && cd /pastec/build \
+  && cmake ../ && make
 
 WORKDIR /pastec/build
-RUN cmake ../ && make
 
 EXPOSE 4212
 VOLUME /pastec/data
