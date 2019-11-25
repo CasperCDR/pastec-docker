@@ -12,8 +12,9 @@ FROM ubuntu:18.04
 ENV TZ=Europe/Amsterdam
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
   && echo $TZ > /etc/timezone \
-  && apt-get update \
-  && apt-get install -y wget curl build-essential g++ libcurl4-openssl-dev libopencv-dev libmicrohttpd-dev libjsoncpp-dev cmake git \
+  && apt update \
+  && apt upgrade -y --force-yes \
+  && apt install -y wget curl build-essential g++ libcurl4-openssl-dev libopencv-dev libmicrohttpd-dev libjsoncpp-dev cmake git \
   && git clone https://github.com/Visu4link/pastec.git \
   && mkdir -p /pastec/build \
   && mkdir /pastec/data \
