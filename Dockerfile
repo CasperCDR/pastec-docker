@@ -5,6 +5,9 @@
 # You can map the data volume to a local share. Be sure to put the
 # visualWordsORB.dat file in that folder before loading the docker image.
 #
+# A C# implementation for accessing the API is available at:
+#    https://github.com/CasperCDR/CsPastecLib
+#
 # Date: 25 Nov 2019
 #
 FROM ubuntu:18.04
